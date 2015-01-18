@@ -9,5 +9,6 @@
     <string name="hint_number">Enter SMS Count</string>
     <string name="hint_mobile_number">Enter Mobile Number</string>
     <string name="button_send">Send</string>
+    <string name="hint_message_body">Enter Message Body</string>
 
 </resources>

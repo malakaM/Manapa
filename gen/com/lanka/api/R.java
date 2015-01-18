@@ -1673,6 +1673,7 @@ containing a value of this type.
         public static final int ifRoom=0x7f090016;
         public static final int image=0x7f090025;
         public static final int input_count=0x7f090043;
+        public static final int input_message_body=0x7f090042;
         public static final int input_mobile_number=0x7f090044;
         public static final int listMode=0x7f09000a;
         public static final int list_item=0x7f090027;
@@ -1700,7 +1701,6 @@ containing a value of this type.
         public static final int split_action_bar=0x7f090004;
         public static final int submit_area=0x7f09003e;
         public static final int tabMode=0x7f09000c;
-        public static final int textView1=0x7f090042;
         public static final int title=0x7f090029;
         public static final int top=0x7f09001f;
         public static final int up=0x7f090001;
@@ -1822,6 +1822,7 @@ containing a value of this type.
         public static final int app_name=0x7f0a000f;
         public static final int button_send=0x7f0a0016;
         public static final int hello_world=0x7f0a0010;
+        public static final int hint_message_body=0x7f0a0017;
         public static final int hint_mobile_number=0x7f0a0015;
         public static final int hint_number=0x7f0a0014;
         public static final int screen_sms_title=0x7f0a0013;
