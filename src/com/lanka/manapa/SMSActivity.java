@@ -33,15 +33,35 @@ public class SMSActivity extends Fragment {
 	        button.setOnClickListener(new View.OnClickListener() {
 	            public void onClick(View v) {
 	            	final EditText mSmsCount = (EditText) getActivity().findViewById(R.id.input_count);
-	        		final int count = Integer.parseInt(mSmsCount.getText().toString());
 	        		final EditText mMobileNumber = (EditText) getActivity().findViewById(R.id.input_mobile_number);
 	        		final EditText mMessageBody = (EditText) getActivity().findViewById(R.id.input_message_body);
+	        		
+	        		int count = 0;
+	        		String countValue = mSmsCount.getText().toString();
+	        		String mobileNumber = mMobileNumber.getText().toString();
+	        		String messageBody = mMessageBody.getText().toString();
 	            	
-
+	        		if( messageBody.length() == 0 ){
+	        			mMessageBody.setError( "Message is required" );
+	        			return;
+	        		}
+	        		
+	        		if( countValue.length() == 0 ){
+	        			mSmsCount.setError( "Count is required" );
+	        			return;
+	        		}else{
+	        			count = Integer.parseInt(countValue);
+	        		}
+	        		
+	        		if( mobileNumber.length() == 0 ){
+	        			mMobileNumber.setError( "Number is required" );
+	        			return;
+	        		}
+	        		
 	                SmsManager smsManager = SmsManager.getDefault();
 	          
 	                for (int i = 0; i < count; i++) {
-	                	 smsManager.sendTextMessage(mMobileNumber.getText().toString(), null, mMessageBody.getText().toString(), null, null);				
+	                	 smsManager.sendTextMessage(mobileNumber, null, messageBody , null, null);				
 					}
 	               
 
